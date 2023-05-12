@@ -26,8 +26,8 @@ namespace GibJohn_2
         private string CurrentWord = string.Empty;
 
         // This string will utilize a .txt file with over 5000 words to choose a random word
-        private const string WORD_FILE_PATH = @"C:\Users\Damian\Desktop\CODING\GibJohn 2\GibJohn 2\EnglishGameWords.txt";
-        
+        private const string WORD_FILE_PATH = @"..\..\EnglishGameWords.txt";
+
         public EnglishGame()
         {
             // This part makes sure the game is ready and running the second a user launches the form
@@ -135,7 +135,7 @@ namespace GibJohn_2
             // Switch statement figures out what line the user is working on
             switch (CurrentLine)
             {
-                case 1:
+                case 1: // The Add(textBox) part "draws" the boxes to show input
                     tempString = textBox1.Text
                             + textBox2.Text
                             + textBox3.Text
