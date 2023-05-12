@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{689FCDB5-AF64-422D-B0E3-42230DC13A31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GibJohn_2</RootNamespace>
+    <AssemblyName>GibJohn 2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDB_connection.cs" />
+    <Compile Include="AppDataTableAdapters\LoginTableAdapter.cs" />
+    <Compile Include="ClassDB.cs" />
+    <Compile Include="ClassDB1.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnglishGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishGame.Designer.cs">
+      <DependentUpon>EnglishGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnglishGameHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishGameHelp.Designer.cs">
+      <DependentUpon>EnglishGameHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnglishVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnglishVideos.Designer.cs">
+      <DependentUpon>EnglishVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningResources.Designer.cs">
+      <DependentUpon>LearningResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Form.Designer.cs">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathGame.Designer.cs">
+      <DependentUpon>MathGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathsVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathsVideos.Designer.cs">
+      <DependentUpon>MathsVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadingMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadingMaterial.Designer.cs">
+      <DependentUpon>ReadingMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevisionResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionResources.Designer.cs">
+      <DependentUpon>RevisionResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScienceGame.Designer.cs">
+      <DependentUpon>ScienceGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScienceVideos.Designer.cs">
+      <DependentUpon>ScienceVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Videos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Videos.Designer.cs">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Whiteboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Whiteboard.Designer.cs">
+      <DependentUpon>Whiteboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WhyKhanAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhyKhanAcademy.Designer.cs">
+      <DependentUpon>WhyKhanAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WhyMemrise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhyMemrise.Designer.cs">
+      <DependentUpon>WhyMemrise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WhySeneca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhySeneca.Designer.cs">
+      <DependentUpon>WhySeneca.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EnglishGame.resx">
+      <DependentUpon>EnglishGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnglishGameHelp.resx">
+      <DependentUpon>EnglishGameHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnglishVideos.resx">
+      <DependentUpon>EnglishVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningResources.resx">
+      <DependentUpon>LearningResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Form.resx">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathGame.resx">
+      <DependentUpon>MathGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathsVideos.resx">
+      <DependentUpon>MathsVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReadingMaterial.resx">
+      <DependentUpon>ReadingMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevisionResources.resx">
+      <DependentUpon>RevisionResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScienceGame.resx">
+      <DependentUpon>ScienceGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScienceVideos.resx">
+      <DependentUpon>ScienceVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Videos.resx">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Whiteboard.resx">
+      <DependentUpon>Whiteboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhyKhanAcademy.resx">
+      <DependentUpon>WhyKhanAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhyMemrise.resx">
+      <DependentUpon>WhyMemrise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhySeneca.resx">
+      <DependentUpon>WhySeneca.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FINISHED STUDENT DASHBOARD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIBJOHN TUTORING.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIBJOHN TUTORING1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GibJohn Database.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\back arrow1.png" />
+    <None Include="Resources\pdf10.jpg" />
+    <None Include="Resources\pdf9.jpg" />
+    <None Include="Resources\pdf8.jpg" />
+    <None Include="Resources\pdf7.jpg" />
+    <None Include="Resources\pdf6.jpg" />
+    <None Include="Resources\pdf5.jpg" />
+    <None Include="Resources\pdf4.jpg" />
+    <None Include="Resources\pdf3.jpg" />
+    <None Include="Resources\pdf2.jpg" />
+    <None Include="Resources\pdf1.jpg" />
+    <None Include="Resources\whykhan.PNG" />
+    <None Include="Resources\whyseneca.PNG" />
+    <None Include="Resources\whymemrise.PNG" />
+    <None Include="Resources\learning3.jpg" />
+    <None Include="Resources\learning2.jpg" />
+    <None Include="Resources\learning1.png" />
+    <None Include="Resources\video18.PNG" />
+    <None Include="Resources\video17.PNG" />
+    <None Include="Resources\video16.PNG" />
+    <None Include="Resources\video15.PNG" />
+    <None Include="Resources\video14.PNG" />
+    <None Include="Resources\video13.PNG" />
+    <None Include="Resources\video12.PNG" />
+    <None Include="Resources\video11.PNG" />
+    <None Include="Resources\video10.PNG" />
+    <None Include="Resources\video9.PNG" />
+    <None Include="Resources\video8.PNG" />
+    <None Include="Resources\video7.PNG" />
+    <None Include="Resources\video6.PNG" />
+    <None Include="Resources\video5.PNG" />
+    <None Include="Resources\video4.PNG" />
+    <None Include="Resources\video3.PNG" />
+    <None Include="Resources\video2.PNG" />
+    <None Include="Resources\VIDEO1.PNG" />
+    <None Include="Resources\reading material.PNG" />
+    <None Include="Resources\reading material 2.PNG" />
+    <None Include="Resources\reading material 3.PNG" />
+    <None Include="Resources\FINISHED LEARNING RESOURCES.png" />
+    <None Include="Resources\back arrow.png" />
+    <None Include="Resources\question mark.png" />
+    <None Include="Resources\WORDLE.PNG" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\PERIODIC TABLE FINISHED.png" />
+    <None Include="Resources\Simple_Periodic_Table_Chart-blocks.svg.png" />
+    <None Include="Resources\science.PNG" />
+    <None Include="Resources\math.PNG" />
+    <None Include="Resources\english.PNG" />
+    <None Include="Resources\FINISHED GAMES DASHBOARD.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
